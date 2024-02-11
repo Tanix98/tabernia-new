@@ -6,7 +6,6 @@ Project for a new product web app using a new dummy api and Vue+Tailwind
 
 ### Type in gitbash:
 
-- cd vite-project
 - npm install
 - npm run dev
 
