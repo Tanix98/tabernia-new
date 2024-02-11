@@ -1,6 +1,6 @@
 # Tabernia 2024
 
-Project for a new product web app using a new dummy api and Vue+Tailwind
+Project for a new product web app using a new dummy api and Vite+Vue+Tailwind
 
 ## Dev setup
 
