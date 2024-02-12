@@ -3,9 +3,9 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
+  <header class="p-3">
     <div>
-      <nav>
+      <nav class="flex gap-3">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/product">Product single</RouterLink>
       </nav>

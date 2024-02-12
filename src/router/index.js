@@ -10,12 +10,17 @@ const router = createRouter({
       component: Home
     },
     {
-      path: '/product',
+      path: '/product/:id',
       name: 'product',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/SingleProduct.vue')
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'ErrorPage',
+      component: () => import('../views/ErrorPage.vue')
     }
   ]
 })

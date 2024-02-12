@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="p-3">
     <h1 class="text-3xl font-bold underline">Tabernia</h1>
     <p>Products will go here</p>
     <ExampleForm />
