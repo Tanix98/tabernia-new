@@ -13,9 +13,14 @@ fetch('https://dummyjson.com/products/' + route.params.id)
 
 <template>
   <div v-if="product" class="p-3">
-    <h1 class="text-3xl">{{ product.title }}</h1>
-    <h2 class="text-2xl">${{ product.price }}</h2>
+    <h1 class="text-3xl font-medium">Title: {{ product.title }}</h1>
+    <h2 class="text-2xl">Price: ${{ product.price }}</h2>
     <img :src="product.images[0]" :alt="product.title" />
-    <p>{{ product.description }}</p>
+    <p>Description: {{ product.description }}</p>
+    <p>Category: {{ product.category }}</p>
+    <p>Brand: {{ product.brand }}</p>
+    <p>Stock: {{ product.stock }}</p>
+    <p>Rating: {{ product.rating }}</p>
+    <p>Discount: {{ product.discountPercentage }}%</p>
   </div>
 </template>

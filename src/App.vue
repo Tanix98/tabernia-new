@@ -1,16 +1,11 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
-  <header class="p-3">
-    <div>
-      <nav class="flex gap-3">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/product">Product single</RouterLink>
-      </nav>
-    </div>
-  </header>
-
+  <Header />
   <RouterView />
+  <Footer />
 </template>
