@@ -1,5 +1,5 @@
 <template>
-  <div class="p-3">
+  <div>
     <h1 class="text-4xl font-bold">Our products</h1>
     <ProductsList />
   </div>

@@ -12,10 +12,14 @@ fetch('https://dummyjson.com/products/' + route.params.id)
 </script>
 
 <template>
-  <div v-if="product" class="p-3">
+  <div v-if="product">
     <h1 class="text-3xl font-medium">Title: {{ product.title }}</h1>
     <h2 class="text-2xl">Price: ${{ product.price }}</h2>
-    <img :src="product.images[0]" :alt="product.title" />
+    <img :src="product.images[0]" :alt="product.title" class="rounded w-96" />
+    <img :src="product.images[1]" :alt="product.title" class="rounded w-96" />
+    <img :src="product.images[2]" :alt="product.title" class="rounded w-96" />
+    <img :src="product.images[3]" :alt="product.title" class="rounded w-96" />
+    <img :src="product.images[4]" :alt="product.title" class="rounded w-96" />
     <p>Description: {{ product.description }}</p>
     <p>Category: {{ product.category }}</p>
     <p>Brand: {{ product.brand }}</p>

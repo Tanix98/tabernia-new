@@ -1,8 +1,7 @@
 <template>
-  <div class="p-3">
+  <div>
     <h1 class="text-4xl font-bold">Contact us</h1>
     <ContactForm />
-    <ProductsList />
   </div>
 </template>
 
