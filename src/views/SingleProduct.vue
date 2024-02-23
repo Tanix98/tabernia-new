@@ -13,27 +13,29 @@ fetch('https://fakestoreapi.com/products/' + route.params.id)
 
 <template>
   <div>
-    <div v-if="product" class="max-w-[50rem]">
-      <div class="flex gap-5">
+    <div v-if="product" class="max-w-[700px] m-auto">
+      <div class="flex gap-7 m-4">
         <img
           :src="product.image"
           :alt="product.title"
-          class="w-96 max-h-96 object-contain shadow-lg p-3"
+          class="w-[300px] h-[300px] object-contain shadow-lg p-3 mt-2 bg-white"
         />
-        <div>
-          <h1 class="text-2xl font-semibold mt-2">{{ product.title }}</h1>
-          <h2 class="text-xl font-semibold mt-2">${{ product.price }}</h2>
+        <div class="inline-flex flex-col gap-2">
+          <h1 class="text-2xl">{{ product.title }}</h1>
+          <h2 class="text-lg">${{ product.price }}</h2>
+          <button class="p-2 px-3 bg-blue-600 text-white shadow-md hover:bg-blue-700">
+            Add to cart
+          </button>
+          <p>{{ product.description }}</p>
+          <p>
+            Category: <span class="text-sm text-gray-600">{{ product.category }}</span>
+          </p>
+          <hr class="border-1 border-black my-2" />
+          <p>Rating: {{ product.rating.rate }} stars</p>
+          <p>See reviews</p>
         </div>
       </div>
       <div>
-        <h3 class="text-xl mt-3">Info:</h3>
-        <p class="mt-2">{{ product.description }}</p>
-        <hr class="border-1 border-black my-2" />
-        <p>Category: {{ product.category }}</p>
-        <p>Brand: {{ product.category }}</p>
-        <p>Stock: {{ product.category }}</p>
-        <hr class="border-1 border-black my-2" />
-        <p>Total rating: {{ product.rating.rate }}</p>
         <p>{{ product.rating.count }} reviews</p>
       </div>
     </div>

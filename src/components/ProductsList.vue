@@ -5,11 +5,7 @@ import ProductsFilterSort from './ProductsFilterSort.vue'
 
 const products = ref(null)
 
-/*
-  fetch('https://dummyjson.com/products')
-  .then((response) => response.json())
-  .then((data) => (products.value = data.products))
-*/
+// Fetch list of products from API
 fetch('https://fakestoreapi.com/products')
   .then((response) => response.json())
   .then((data) => (products.value = data))
@@ -24,21 +20,26 @@ fetch('https://fakestoreapi.com/products')
       <li
         v-for="product in products"
         :key="product.id"
-        class="flex items-center flex-wrap flex-col"
+        class="z-0 group flex items-center flex-wrap flex-col"
       >
-        <router-link :to="{ path: '/product/' + product.id }">
-          <div class="w-[200px] overflow-hidden p-2">
+        <div class="pb-12 relative w-[200px] overflow-hidden p-2 flex flex-col">
+          <router-link :to="{ path: '/product/' + product.id }">
             <div class="p-2 max-w-[300px] max-h-[300px] overflow-hidden">
               <img
                 :src="product.image"
                 :alt="product.title"
-                class="hover:scale-105 transition duration-500 cursor-pointer h-44 m-auto object-contain"
+                class="hover:scale-105 transition duration-500 cursor-pointer h-44 m-auto object-contain shadow bg-white"
               />
             </div>
             <h3 class="font-semibold line-clamp-3">{{ product.title }}</h3>
             <h3 class="">${{ product.price }}</h3>
-          </div>
-        </router-link>
+          </router-link>
+          <button
+            class="p-2 px-3 bg-blue-600 text-white hidden absolute bottom-0 shadow-md hover:bg-blue-700 group-hover:block"
+          >
+            Add to cart
+          </button>
+        </div>
       </li>
     </ul>
     <div v-if="!products" class="text-center">

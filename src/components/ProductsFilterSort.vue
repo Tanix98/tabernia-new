@@ -26,14 +26,15 @@ export default {
     <button @click="toggle" class="bg-amber-950 px-2 py-1 text-white" id="sort-menu">
       Price (low - high)
     </button>
+    <ul class="flex flex-col gap-1 max-w-40 mt-1">
+      <li v-if="active" class="py-1 px-2 hover:bg-white cursor-pointer">Price (low - high)</li>
+      <li v-if="active" class="py-1 px-2 hover:bg-white cursor-pointer">Price (high - low)</li>
+      <li v-if="active" class="py-1 px-2 hover:bg-white cursor-pointer">Name (ascending)</li>
+      <li v-if="active" class="py-1 px-2 hover:bg-white cursor-pointer">Name (descending)</li>
+      <li v-if="active" class="py-1 px-2 hover:bg-white cursor-pointer">Rating</li>
+      <li v-if="active" class="py-1 px-2 hover:bg-white cursor-pointer">Discount</li>
+    </ul>
     <p>Filter by:</p>
-    <div v-if="active">Price (low - high)</div>
-    <div v-if="active">Price (high - low)</div>
-    <div v-if="active">Name (ascending)</div>
-    <div v-if="active">Name (descending)</div>
-    <div v-if="active">Rating</div>
-    <div v-if="active">Discount</div>
-
     <div class="flex gap-1 items-center">
       <input type="checkbox" id="in-stock" />
       <label for="in-stock">In stock</label>

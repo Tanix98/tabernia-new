@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-  <header class="p-3 bg-gray-950 text-white">
+  <header class="z-10 p-3 bg-gray-950 text-white fixed w-screen">
     <div>
       <nav class="flex gap-3 items-end">
         <RouterLink to="/"
@@ -15,6 +15,7 @@ export default {
         >
         <RouterLink to="/" class="hover:text-slate-200">Store</RouterLink>
         <RouterLink to="/contact" class="hover:text-slate-200">Contact us</RouterLink>
+        <RouterLink to="/checkout" class="hover:text-slate-200">Checkout</RouterLink>
       </nav>
     </div>
   </header>
