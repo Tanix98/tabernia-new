@@ -22,11 +22,11 @@ export default {
 
 <template>
   <div>
-    <p>Filter / sort:</p>
     <label for="sort-menu" class="mr-2">Sort by</label>
-    <button @click="toggle" class="bg-amber-900 px-2 py-1 rounded-lg text-white" id="sort-menu">
+    <button @click="toggle" class="bg-amber-950 px-2 py-1 text-white" id="sort-menu">
       Price (low - high)
     </button>
+    <p>Filter by:</p>
     <div v-if="active">Price (low - high)</div>
     <div v-if="active">Price (high - low)</div>
     <div v-if="active">Name (ascending)</div>

@@ -5,7 +5,8 @@ export default {
 </script>
 
 <template>
-  <div class="px-3 py-6 bg-slate-950 text-white">
-    <p>Tabernia 2024 copyright</p>
+  <div class="flex justify-center gap-2 flex-wrap px-3 py-6 bg-gray-500 text-white">
+    <p>Copyright <span>©</span> 2024 Tabernia.</p>
+    <p>All rights reserved.</p>
   </div>
 </template>

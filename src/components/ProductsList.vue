@@ -1,18 +1,25 @@
 <script setup>
 import { ref } from 'vue'
+import SearchProducts from './SearchProducts.vue'
 import ProductsFilterSort from './ProductsFilterSort.vue'
 
 const products = ref(null)
 
-fetch('https://dummyjson.com/products')
+/*
+  fetch('https://dummyjson.com/products')
   .then((response) => response.json())
   .then((data) => (products.value = data.products))
+*/
+fetch('https://fakestoreapi.com/products')
+  .then((response) => response.json())
+  .then((data) => (products.value = data))
 </script>
 
 <template>
   <div>
+    <h1 class="text-3xl">Products</h1>
+    <SearchProducts />
     <ProductsFilterSort />
-    <h2 class="text-2xl">Products</h2>
     <ul v-if="products" class="flex gap-5 flex-wrap">
       <li
         v-for="product in products"
@@ -20,15 +27,15 @@ fetch('https://dummyjson.com/products')
         class="flex items-center flex-wrap flex-col"
       >
         <router-link :to="{ path: '/product/' + product.id }">
-          <div class="max-w-[400px] overflow-hidden p-2">
-            <div class="max-w-[300px] max-h-[300px] overflow-hidden rounded">
+          <div class="w-[200px] overflow-hidden p-2">
+            <div class="p-2 max-w-[300px] max-h-[300px] overflow-hidden">
               <img
-                :src="product.thumbnail"
+                :src="product.image"
                 :alt="product.title"
-                class="hover:scale-110 transition duration-500 cursor-pointer h-44 m-auto"
+                class="hover:scale-105 transition duration-500 cursor-pointer h-44 m-auto object-contain"
               />
             </div>
-            <h3 class="font-semibold">{{ product.title }}</h3>
+            <h3 class="font-semibold line-clamp-3">{{ product.title }}</h3>
             <h3 class="">${{ product.price }}</h3>
           </div>
         </router-link>

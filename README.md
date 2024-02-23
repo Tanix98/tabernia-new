@@ -1,6 +1,6 @@
 # Tabernia 2024
 
-Project for a new product web app using a new dummy api and Vite+Vue+Tailwind
+Remake of an online store project from 2023, that was also called Tabernia. The old project was made using React+Bootstrap. This new project is made with Vue+Tailwind, and uses a different dummy API.
 
 ## Dev setup
 
@@ -8,6 +8,14 @@ Project for a new product web app using a new dummy api and Vite+Vue+Tailwind
 
 - npm install
 - npm run dev
+
+### To-do
+
+- Remake the original Tabernia style with the new CSS framework
+- Search bar
+- Sort products
+- Filter products
+- Shopping cart
 
 # tabernia-new
 

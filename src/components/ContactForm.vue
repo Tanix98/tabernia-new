@@ -10,7 +10,7 @@
             placeholder="Name"
             v-model="userName"
             id="userName"
-            class="border-black border-2 p-1"
+            class="border-black border p-1"
           />
         </div>
         <div class="flex flex-col gap-1">
@@ -21,7 +21,7 @@
             placeholder="Email"
             v-model="userEmail"
             id="userEmail"
-            class="border-black border-2 p-1"
+            class="border-black border p-1"
           />
         </div>
       </div>
@@ -32,7 +32,7 @@
           placeholder="Message"
           v-model="userMessage"
           id="userMessage"
-          class="border-black border-2 p-1"
+          class="border-black border p-1"
           rows="4"
         ></textarea>
       </div>
