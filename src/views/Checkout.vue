@@ -1,7 +1,15 @@
 <template>
   <div>
-    <h1>Cart</h1>
+    <h1 class="text-3xl mb-14">Shopping cart</h1>
+    <ShoppingCartMain />
   </div>
 </template>
 
-<script></script>
+<script>
+import ShoppingCartMain from '../components/ShoppingCartMain.vue'
+export default {
+  components: {
+    ShoppingCartMain
+  }
+}
+</script>

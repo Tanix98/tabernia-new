@@ -16,6 +16,7 @@ Remake of an online store project from 2023, that was also called Tabernia. The 
 - Sort products
 - Filter products
 - Shopping cart
+- Form validation
 
 # tabernia-new
 
