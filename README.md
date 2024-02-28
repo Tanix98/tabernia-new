@@ -19,6 +19,7 @@ Remake of an online store project from 2023, that was also called Tabernia. The 
 - Create shopping cart function
 - Add form validation
 - User login?
+- Set up external host
 
 # tabernia-new
 
