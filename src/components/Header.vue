@@ -7,8 +7,8 @@ export default {
 </script>
 
 <template>
-  <header class="z-10 p-3 bg-gray-950 text-white fixed w-full">
-    <nav class="flex gap-3 flex-wrap items-center">
+  <header class="z-10 bg-gray-950 text-white fixed w-full">
+    <nav class="flex gap-3 flex-wrap items-center p-3 max-w-[63rem]">
       <RouterLink to="/"
         ><h1 class="text-2xl font-semibold text-blue-300 hover:text-blue-500 focus:text-blue-500">
           Tabernia
