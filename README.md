@@ -11,12 +11,14 @@ Remake of an online store project from 2023, that was also called Tabernia. The 
 
 ### To-do
 
-- Remake the original Tabernia style with the new CSS framework
-- Search bar
-- Sort products
-- Filter products
-- Shopping cart
-- Form validation
+- ~~Fetch products list from the new API~~
+- ~~Remake the original Tabernia style using Tailwind~~
+- Create search function
+- Create sort products function
+- Create filter products function
+- Create shopping cart function
+- Add form validation
+- User login?
 
 # tabernia-new
 

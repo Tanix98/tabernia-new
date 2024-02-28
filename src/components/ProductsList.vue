@@ -17,19 +17,19 @@ fetch('https://fakestoreapi.com/products')
     <h1 class="text-3xl">Products</h1>
     <SearchProducts />
     <ProductsFilterSort />
-    <ul v-if="products" class="flex gap-5 flex-wrap">
+    <ul v-if="products" class="flex gap-5 flex-wrap md:justify-between">
       <li
         v-for="product in products"
         :key="product.id"
-        class="z-0 group flex items-center flex-wrap flex-col"
+        class="break-all sm:break-words first:z-0 group flex items-center flex-wrap flex-col"
       >
-        <div class="pb-12 relative w-[200px] overflow-hidden p-2 flex flex-col">
+        <div class="pb-12 relative max-w-80 sm:w-52 overflow-hidden p-2 flex flex-col">
           <router-link :to="{ path: '/product/' + product.id }">
-            <div class="p-2 max-w-[300px] max-h-[300px] overflow-hidden">
+            <div class="p-2 sm:max-w-[19rem] sm:max-h-[19rem] overflow-hidden">
               <img
                 :src="product.image"
                 :alt="product.title"
-                class="hover:scale-105 group-focus:scale-105 transition duration-500 cursor-pointer h-44 m-auto object-contain shadow bg-white p-1"
+                class="hover:scale-105 group-focus:scale-105 transition duration-500 cursor-pointer max-h-72 sm:h-44 md:max-w-44 m-auto object-contain shadow bg-white p-1"
               />
             </div>
             <h3 class="font-semibold line-clamp-3">{{ product.title }}</h3>

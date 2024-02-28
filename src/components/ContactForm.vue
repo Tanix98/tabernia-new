@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-flex flex-col flex-wrap gap-4 mt-4 max-w-[450px]">
+  <div class="inline-flex flex-col flex-wrap gap-4 mt-4 max-w-[28rem]">
     <div class="flex flex-col gap-3">
       <div class="flex gap-3 flex-wrap">
         <div class="flex flex-col gap-1 flex-1">
