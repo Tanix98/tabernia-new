@@ -1,4 +1,13 @@
 <script>
+import { ref } from 'vue'
+
+const text = ref('')
+
+const searchProductList = (e) => {
+  console.log(e)
+  console.log(text)
+}
+
 export default {
   name: 'SearchProducts'
 }
@@ -9,9 +18,9 @@ export default {
     <input
       class="border-black border py-1 px-2 min-w-0"
       type="text"
-      v-model="input"
+      v-model="text"
       placeholder="Search"
     />
-    <button class="bg-black border text-white py-1 px-2">Search</button>
+    <button class="bg-black border text-white py-1 px-2" @click="searchProductList">Search</button>
   </div>
 </template>

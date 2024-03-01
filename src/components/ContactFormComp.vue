@@ -1,3 +1,35 @@
+<script>
+import { ref, onMounted } from 'vue'
+
+export default {
+  setup() {
+    const userName = ref('')
+    const userEmail = ref('')
+    const subject = ref('')
+    const userMessage = ref('')
+    const el = ref()
+
+    const submitForm = () => {
+      console.log(
+        `Form submitted! Name: ${userName.value}, Email: ${userName.value}, Subject: ${subject.value}, Message: ${userName.value}`
+      )
+    }
+
+    /*onMounted(() => {
+      el.value.focus()
+    })*/
+
+    return {
+      el,
+      userName,
+      userEmail,
+      userMessage,
+      submitForm
+    }
+  }
+}
+</script>
+
 <template>
   <div class="inline-flex flex-col flex-wrap gap-4 mt-4 max-w-[28rem]">
     <div class="flex flex-col gap-3">
@@ -65,35 +97,3 @@
     </div>
   </div>
 </template>
-
-<script>
-import { ref, onMounted } from 'vue'
-
-export default {
-  setup() {
-    const userName = ref('')
-    const userEmail = ref('')
-    const subject = ref('')
-    const userMessage = ref('')
-    const el = ref()
-
-    const submitForm = () => {
-      console.log(
-        `Form submitted! Name: ${userName.value}, Email: ${userName.value}, Subject: ${subject.value}, Message: ${userName.value}`
-      )
-    }
-
-    /*onMounted(() => {
-      el.value.focus()
-    })*/
-
-    return {
-      el,
-      userName,
-      userEmail,
-      userMessage,
-      submitForm
-    }
-  }
-}
-</script>

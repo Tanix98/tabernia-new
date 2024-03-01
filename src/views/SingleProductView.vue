@@ -1,5 +1,5 @@
 <script setup>
-import LoadingAnimation from '@/components/LoadingAnimation.vue'
+import LoadingAnimation from '@/components/LoadingAnimationComp.vue'
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
 
@@ -22,15 +22,15 @@ fetch('https://fakestoreapi.com/products/' + route.params.id)
           :alt="product.title"
           class="w-[28rem] m-auto sm:m-0 sm:w-[19rem] sm:h-[19rem] object-contain shadow-lg p-3 mt-2 bg-white"
         />
-        <div class="inline-flex flex-col gap-2">
+        <div class="sm:max-w-96 inline-flex flex-col gap-2">
           <h1 class="text-2xl">{{ product.title }}</h1>
           <h2 class="text-lg">${{ product.price }}</h2>
           <button
-            class="max-w-72 sm:max-w-44 p-2 px-4 bg-blue-600 text-white shadow-md hover:bg-blue-700 focus:bg-blue-700"
+            class="mt-2 sm:mt-0 sm:w-full p-2 px-4 bg-blue-600 text-white shadow-md hover:bg-blue-700 focus:bg-blue-700"
           >
             Add to cart
           </button>
-          <p class="block sm:hidden">
+          <p class="block sm:hidden my-2">
             {{ product.description[0].toUpperCase() + product.description.slice(1) }}
           </p>
 
@@ -45,7 +45,7 @@ fetch('https://fakestoreapi.com/products/' + route.params.id)
           <p>{{ product.rating.count }} reviews</p>
         </div>
       </div>
-      <p class="hidden sm:block">
+      <p class="hidden sm:block mt-8">
         {{ product.description[0].toUpperCase() + product.description.slice(1) }}
       </p>
     </div>

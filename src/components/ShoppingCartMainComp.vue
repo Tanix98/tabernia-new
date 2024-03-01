@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import LoadingAnimation from './LoadingAnimation.vue'
+import LoadingAnimation from './LoadingAnimationComp.vue'
 
 const product = ref()
 
@@ -24,14 +24,14 @@ fetch('https://fakestoreapi.com/products/1')
       <hr class="hidden md:block border-1 border-black my-10" />
       <div class="flex flex-row flex-wrap gap-4 md:gap-8 md:flex-col mb-10">
         <div
-          class="max-w-72 md:max-w-full bg-white p-4 shadow-md flex flex-col md:flex-row justify-between relative"
+          class="sm:max-w-72 md:max-w-full bg-white p-4 shadow-md flex flex-col md:flex-row justify-between relative"
         >
           <div class="flex flex-col md:flex-row gap-4 flex-wrap items-center">
             <img :src="product.image" alt="" class="h-64 md:h-32 object-contain shadow-lg p-1" />
             <p class="md:max-w-[180px] line-clamp-5 text-xl md:text-base">
               {{ product.title }}
             </p>
-            <p class="block md:hidden" title="Price">$134</p>
+            <p class="block md:hidden text-lg" title="Price">$134</p>
           </div>
           <div
             class="flex items-center self-center my-5 md:my-0 md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2"
@@ -55,14 +55,14 @@ fetch('https://fakestoreapi.com/products/1')
           </div>
         </div>
         <div
-          class="max-w-72 md:max-w-full bg-white p-4 shadow-md flex flex-col md:flex-row justify-between relative"
+          class="sm:max-w-72 md:max-w-full bg-white p-4 shadow-md flex flex-col md:flex-row justify-between relative"
         >
           <div class="flex flex-col md:flex-row gap-4 flex-wrap items-center">
             <img :src="product.image" alt="" class="h-64 md:h-32 object-contain shadow-lg p-1" />
             <p class="md:max-w-[180px] line-clamp-5 text-xl md:text-base">
               {{ product.title }}
             </p>
-            <p class="block md:hidden" title="Price">$134</p>
+            <p class="block md:hidden text-lg" title="Price">$134</p>
           </div>
           <div
             class="flex items-center self-center my-5 md:my-0 md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2"
