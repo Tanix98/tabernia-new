@@ -3,6 +3,11 @@ import { RouterLink } from 'vue-router'
 
 export default {
   name: 'Header',
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0)
+    }
+  },
   data() {
     return {
       showMenu: false
@@ -15,7 +20,7 @@ export default {
   <header class="z-10 bg-gray-950 text-white fixed w-full">
     <nav class="flex flex-col sm:flex-row gap-3 flex-wrap items-center p-3 max-w-[78rem]">
       <div class="flex flex-wrap justify-between w-full sm:w-auto">
-        <RouterLink to="/"
+        <RouterLink to="/" @click="scrollToTop()"
           ><h1 class="text-2xl font-semibold text-blue-300 hover:text-blue-500 focus:text-blue-500">
             Tabernia
           </h1></RouterLink
@@ -42,22 +47,27 @@ export default {
       <ul
         :class="showMenu ? 'flex' : 'hidden'"
         class="flex-grow text-lg text-right ms-auto sm:ms-0 flex-col mt-2 mb-2 gap-4 sm:flex sm:flex-row sm:items-center sm:mt-0 sm:mb-0"
+        @click="(showMenu = !showMenu), scrollToTop()"
       >
-        <li class="text-gray-100 hover:text-blue-500">
-          <RouterLink to="/" class="hover:underline focus:underline">Store</RouterLink>
+        <li>
+          <RouterLink to="/" class="text-gray-100 hover:underline focus:underline"
+            >Store</RouterLink
+          >
         </li>
-        <li class="text-gray-100 hover:text-blue-500">
-          <RouterLink to="/contact" class="hover:underline focus:underline">Contact us</RouterLink>
+        <li>
+          <RouterLink to="/contact" class="text-gray-100 hover:underline focus:underline"
+            >Contact us</RouterLink
+          >
         </li>
         <li class="ms-auto">
-          <RouterLink to="/checkout" class="text-gray-100 hover:text-blue-500"
+          <RouterLink to="/checkout"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6"
+              class="w-6 h-6 text-gray-100 hover:border-b-[1.5px] focus:border-b-[1.5px]"
             >
               <path
                 stroke-linecap="round"
