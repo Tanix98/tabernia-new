@@ -9,12 +9,12 @@ const searchProductList = (e) => {
 }
 
 export default {
-  name: 'SearchProducts'
+  name: 'SearchProductsComp'
 }
 </script>
 
 <template>
-  <div class="my-2 max-w-96 flex flex-nowrap">
+  <div class="mb-2 max-w-96 flex flex-nowrap">
     <input
       class="border-black border py-1 px-2 min-w-0"
       type="text"

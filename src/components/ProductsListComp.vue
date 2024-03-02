@@ -1,7 +1,5 @@
 <script setup>
 import { ref } from 'vue'
-import SearchProducts from './SearchProductsComp.vue'
-import ProductsFilterSort from './ProductsFilterSortComp.vue'
 import LoadingAnimation from './LoadingAnimationComp.vue'
 
 const products = ref(null)
@@ -14,18 +12,15 @@ fetch('https://fakestoreapi.com/products')
 
 <template>
   <div>
-    <h1 class="text-3xl">Products</h1>
-    <SearchProducts />
-    <ProductsFilterSort />
     <div class="hidden p-3 w-full bg-white shadow-lg min-h-40">
       <h2 class="text-2xl">Men's clothing</h2>
       <ul></ul>
     </div>
-    <ul v-if="products" class="flex flex-wrap md:justify-between">
+    <ul v-if="products" class="flex flex-wrap">
       <li
         v-for="product in products"
         :key="product.id"
-        class="break-all sm:break-words group flex items-center flex-wrap flex-col"
+        class="break-all sm:break-normal group flex items-center flex-wrap flex-col"
       >
         <div class="pb-12 relative max-w-80 sm:w-52 overflow-hidden p-2 flex flex-col">
           <router-link :to="{ path: '/product/' + product.id }">

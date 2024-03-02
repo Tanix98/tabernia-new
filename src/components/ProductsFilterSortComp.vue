@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'ProductsFilterSort',
+  name: 'ProductsFilterSortComp',
   data() {
     return {
       active: false
