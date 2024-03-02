@@ -13,7 +13,7 @@ export default {
 
 <template>
   <header class="z-10 bg-gray-950 text-white fixed w-full">
-    <nav class="flex flex-col sm:flex-row gap-3 flex-wrap items-center p-3 max-w-[63rem]">
+    <nav class="flex flex-col sm:flex-row gap-3 flex-wrap items-center p-3 max-w-[78rem]">
       <div class="flex flex-wrap justify-between w-full sm:w-auto">
         <RouterLink to="/"
           ><h1 class="text-2xl font-semibold text-blue-300 hover:text-blue-500 focus:text-blue-500">

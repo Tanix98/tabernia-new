@@ -14,7 +14,7 @@ fetch('https://fakestoreapi.com/products/' + route.params.id)
 </script>
 
 <template>
-  <div class="max-w-[43.8rem]">
+  <div class="max-w-[43rem]">
     <div v-if="product">
       <div class="flex flex-col sm:flex-row gap-7 mb-4 sm:m-4">
         <img

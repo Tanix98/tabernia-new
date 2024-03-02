@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="max-w-[78rem]">
     <h1 class="text-3xl mb-14">Shopping cart</h1>
     <ShoppingCartMain />
   </div>

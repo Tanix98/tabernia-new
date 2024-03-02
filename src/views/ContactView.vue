@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="max-w-[78rem]">
     <h1 class="text-4xl font-bold">Contact us</h1>
     <ContactForm />
   </div>

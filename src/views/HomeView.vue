@@ -13,14 +13,14 @@ export default {
 </script>
 
 <template>
-  <div>
-    <h1 class="text-3xl font-semibold lg:ms-72 mb-6">Products</h1>
-    <div class="lg:flex gap-4">
-      <div class="lg:fixed">
+  <div class="max-w-[78rem]">
+    <h1 class="text-3xl font-semibold md:ms-72 mb-6">Products</h1>
+    <div class="md:flex gap-4">
+      <div class="md:fixed">
         <SearchProductsComp />
         <ProductsFilterSortComp />
       </div>
-      <ProductsListComp class="lg:ms-72" />
+      <ProductsListComp class="md:ms-72" />
     </div>
   </div>
 </template>
