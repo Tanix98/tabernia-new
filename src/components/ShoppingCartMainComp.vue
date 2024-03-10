@@ -15,11 +15,13 @@ fetch('https://fakestoreapi.com/products/1')
   <div>
     <div class="" v-if="product">
       <div class="hidden md:flex justify-between text-2xl relative">
-        <h2>Product</h2>
-        <h2 class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <h2 class="font-Nunito font-bold">Product</h2>
+        <h2
+          class="font-Nunito font-bold absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        >
           Quantity
         </h2>
-        <h2>Price</h2>
+        <h2 class="font-Nunito font-bold">Price</h2>
       </div>
       <hr class="hidden md:block border-1 border-black my-10" />
       <div class="flex flex-row flex-wrap gap-4 md:gap-8 md:flex-col mb-10">

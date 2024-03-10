@@ -9,7 +9,7 @@ export default {
 
 <template>
   <div class="max-w-[78rem]">
-    <h1 class="text-4xl font-bold">Contact us</h1>
+    <h1 class="font-Nunito font-extrabold text-4xl">Contact us</h1>
     <ContactForm />
   </div>
 </template>

@@ -14,7 +14,7 @@ export default {
 
 <template>
   <div class="max-w-[78rem]">
-    <h1 class="text-3xl font-semibold md:ms-72 mb-6">Products</h1>
+    <h1 class="font-Nunito font-extrabold text-3xl md:ms-72 mb-6">Products</h1>
     <div class="md:flex gap-4">
       <div class="md:fixed">
         <SearchProductsComp />
